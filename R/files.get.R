@@ -32,7 +32,7 @@ files.get <- function(fileId, reportId){
   # then remove the totals row
   response <- str_split(response,"\nGrand Total")[[1]][1]
   
-  report <- read.csv(text=response,header=TRUE,sep=",")
+  report <- read.csv(text=response,header=TRUE,sep=",", stringsAsFactors = FALSE)
   
   return(report)
 
